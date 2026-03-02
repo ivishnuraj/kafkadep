@@ -29,10 +29,10 @@ services:
       # ===== SSL =====
       KAFKA_SSL_CLIENT_AUTH: none
       KAFKA_SSL_KEYSTORE_LOCATION: /etc/kafka/ssl/kafka.keystore.jks
-      KAFKA_SSL_KEYSTORE_PASSWORD: changeit
-      KAFKA_SSL_KEY_PASSWORD: changeit
+      KAFKA_SSL_KEYSTORE_PASSWORD: admin@123
+      KAFKA_SSL_KEY_PASSWORD: admin@123
       KAFKA_SSL_TRUSTSTORE_LOCATION: /etc/kafka/ssl/kafka.truststore.jks
-      KAFKA_SSL_TRUSTSTORE_PASSWORD: changeit
+      KAFKA_SSL_TRUSTSTORE_PASSWORD: admin@123
 
       # ===== JAAS =====
       KAFKA_OPTS: -Djava.security.auth.login.config=/etc/kafka/jaas.conf
@@ -68,7 +68,7 @@ services:
 
       # Trust the same certificate
       KAFKA_CLUSTERS_0_PROPERTIES_SSL_TRUSTSTORE_LOCATION: /etc/kafka/ssl/kafka.truststore.jks
-      KAFKA_CLUSTERS_0_PROPERTIES_SSL_TRUSTSTORE_PASSWORD: changeit
+      KAFKA_CLUSTERS_0_PROPERTIES_SSL_TRUSTSTORE_PASSWORD: admin@123
 
     volumes:
       - ./ssl:/etc/kafka/ssl
