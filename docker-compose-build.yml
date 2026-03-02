@@ -1,0 +1,15 @@
+
+services:
+  crypto-tools:
+    image: alpine:latest
+    container_name: crypto-tools
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data:/data
+    command: >
+      sh -c "
+      apk update &&
+      apk add --no-cache openssl openjdk17-jre &&
+      sh
+      "
